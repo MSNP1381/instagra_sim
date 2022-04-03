@@ -1,0 +1,22 @@
+<div style="text-align:center" *ngIf="postDetails">
+
+  <img class="post_image" (dblclick)="onLikeClick() " [src]="url+postDetails.image_url">
+  <div class="row pt-3">
+
+    <div class="col-10 px-3   " style="text-align:start">
+      <p>likes:{{postDetails.likes}} </p>
+    </div>
+    <div class="col-2">
+      <a style="direction: ltr" (click)="onLikeClick()">
+        <mat-icon aria-hidden="false" style="color:red;" aria-label="Example home icon">
+          {{postDetails.is_liked ? "favorite" : "favorite_bordered"}}
+        </mat-icon>
+      </a>
+    </div>
+  </div>
+
+  <div class="post_caption">{{postDetails.caption}}</div>
+
+  <small style="opacity: 80%">{{postDetails.date}}</small>
+
+</div>
