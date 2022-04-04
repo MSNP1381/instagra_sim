@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'posts',
     'rest_framework',
     'corsheaders',
-    'easy_thumbnails',
+    'imagekit',
 
 ]
 

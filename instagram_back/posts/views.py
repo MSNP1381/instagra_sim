@@ -42,6 +42,8 @@ class Stories(APIView):
         return Response(serialized.data)
 
     def post(self, request):
+        print(request.data)
+        print(100*"#")
         serializer = StorySerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
