@@ -1,0 +1,12 @@
+<button routerLink="create-post" > Create Post </button>
+<div class="row">
+  <app-stories  *ngFor="let i of storyData" [storyDetails]="i" ></app-stories>
+</div>
+<div class="row">
+</div>
+<mat-card class="m-3 pb-2">
+  <div *ngFor="let i of postData" class="p-3">
+    <app-posts  [postDetails]="i"></app-posts>
+    <br>
+  </div>
+</mat-card>

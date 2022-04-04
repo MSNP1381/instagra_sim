@@ -1,0 +1,12 @@
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1"><mat-icon>text_fields</mat-icon></span>
+  </div>
+  <input type="text" class="form-control" [(ngModel)]="caption" placeholder="Caption" aria-label="Caption" aria-describedby="basic-addon1">
+</div>
+
+<div class="input-group mb-3">
+<!--  <input type="file" >-->
+  <input type="text" (change)="onFileChanged($event)" class="form-control" type="file" aria-label="Recipient's username" aria-describedby="basic-addon2">
+</div>
+

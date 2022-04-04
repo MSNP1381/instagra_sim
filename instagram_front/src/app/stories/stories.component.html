@@ -1,4 +1,4 @@
-<div *ngIf="storyDetails" style="text-align: center;">
+<div  (click)="openStoryDialog()" *ngIf="storyDetails" style="text-align: center;">
 <img [src]="url+storyDetails.image" width="100px" class="rounded-circle"  alt="">
 <div>{{storyDetails.title}}</div>
 </div>

@@ -4,13 +4,14 @@ from django.db import models
 import base64
 from sorl.thumbnail import ImageField
 
+
 # Create your models here.
 class Post(models.Model):
     caption = models.CharField(max_length=4000)
-    likes = models.IntegerField()
-    is_liked = models.BooleanField(default=False)
+    likes = models.IntegerField(default=0, blank=True)
+    is_liked = models.BooleanField(default=False, blank=True)
     date = models.DateTimeField(auto_now_add=True)
-    image_url = models.ImageField(upload_to='images')
+    image_url = models.ImageField(upload_to='images', blank=True)
     author = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
